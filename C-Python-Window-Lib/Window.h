@@ -19,5 +19,6 @@ public:
 	void Init();
 	int Loop();
 	void Quit();
+	void Clear();
 	void createRect(int x, int y, int w, int h, int r, int g, int b, int a);
 };

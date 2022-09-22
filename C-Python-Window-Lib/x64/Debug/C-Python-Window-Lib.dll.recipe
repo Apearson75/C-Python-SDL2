@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\ajmat\Documents\python-c-windows\lib\C-Python-Window-Lib.dll</FullPath>
+      <FullPath>C:\Users\ajmat\Documents\python-c-windows\src\PyWindows\lib\C-Python-Window-Lib.dll</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

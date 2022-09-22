@@ -3,10 +3,9 @@
 #include "Window.h"
 #include <stdio.h>
 #include <SDL.h>
-#include <json.hpp>
 
 SDL_Event* e;
-using json = nlohmann::json;
+//using json = nlohmann::json;
 
 void Window::Init()
 {
@@ -61,6 +60,12 @@ void Window::Quit()
 	SDL_Quit();
 }
 
+void Window::Clear()
+{
+	SDL_SetRenderDrawColor(renderer, 0, 0, 0, 0);
+	SDL_RenderClear(renderer);
+}
+
 void Window::createRect(int x, int y, int w, int h, int r, int g, int b, int a)
 {
 	SDL_Rect rect;
@@ -100,6 +105,10 @@ extern "C" {
 	__declspec(dllexport)
 	void windowQuit(Window* window) {
 		window->Quit();
+	}
+	__declspec(dllexport)
+	void windowClear(Window* window) {
+		window->Clear();
 	}
 	__declspec(dllexport)
 	void createRect(Window* window, int x, int y, int w, int h, int r, int g, int b, int a) {
